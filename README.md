@@ -1,2 +1,2 @@
 # debu
-This is my all codes
+These are my all codes
