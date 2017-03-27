@@ -1,0 +1,39 @@
+#include<iostream>
+#include<fstream>
+#include "TROOT.h"
+#include "TF1.h"
+#include "TRandom.h"
+#include "TStopwatch"
+ 
+  //Double_t myFunc(double x) { return x+sin(x); }
+  /*
+  double  A, mu, sigma2;
+  Double_t myFunc(double x, A,mu,sigma2) {return A*exp(-0.5*((x-mu)/sigma2)**2); }
+  A=4000.0;
+  mu=0.0;
+  sigma2=1;
+  */
+Double_t myfunction(Double_t *x, Double_t *par)
+{
+  Float_t xx ;
+  Double_t f = par[0]*exp(-0.5*((xx-par[1])/par[2])**2);
+  return f; 
+}
+
+//cout<< myfunction(3) <<endl;    
+
+  void check()
+  {
+    TF1 *f1 = new TF1("myfunc",myfunction,-5,5,3);
+    f1->SetParameters(4000,0,1);
+    //    f1->SetParNames("constant","coefficient","ggg");
+    f1->Draw();
+  } 
+
+  /*
+TF1 *fa3 = new TF1("fa3","myfunction",-5,5);
+ fa3->SetParameters(4000,0,1);
+//  fa3->SetParameters(4000,0,1);
+fa3->Draw();
+}
+  */
