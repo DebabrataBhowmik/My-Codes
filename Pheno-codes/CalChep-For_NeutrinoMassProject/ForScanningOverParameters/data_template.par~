@@ -1,0 +1,12 @@
+# file to improve default parameters
+
+gdark      9.0e-01
+lamP	   1.e-04
+Lambda	   Lambda_val
+MBX	   0.0007308e+06
+Mchi	   8.50e+01
+MH	   125.1
+MHS	   0.001090754e+06
+Mver	   1.e-11
+Mvmr	   3.e-11
+Mvtr	   7.e-11
